@@ -1,0 +1,9 @@
+﻿  Python_Invoker_Module.cpp
+     Creating library D:\203 - C++\C++ Sample\Python_Invoker_Module\x64\Release\Python_Invoker_Module.lib and object D:\203 - C++\C++ Sample\Python_Invoker_Module\x64\Release\Python_Invoker_Module.exp
+  Generating code
+  163 of 416 functions (39.2%) were compiled, the rest were copied from previous compilation.
+    63 functions were new in current compilation
+    9 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Python_Invoker_Module.vcxproj -> D:\203 - C++\C++ Sample\Python_Invoker_Module\x64\Release\Python_Invoker_Module.exe
+  Python_Invoker_Module.vcxproj -> D:\203 - C++\C++ Sample\Python_Invoker_Module\x64\Release\Python_Invoker_Module.pdb (Full PDB)
