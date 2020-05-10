@@ -1,12 +1,7 @@
 #include "PyInvoker.h"
+#include "Common.h"
 #include <iostream>
 #include <thread>
-
-
-#define PYTHON_IMPORT_SYS			"import sys\n"
-#define PYTHON_IMPORT_DIR_PREF		"sys.path.append('"
-#define PYTHON_IMPORT_DIR_SUF		"')\n"
-
 
 bool PyInvoker::Initialize()
 {
@@ -98,20 +93,4 @@ int PyInvoker::RunParasFunc(std::string module, std::string func, std::vector<in
 	return result;
 }
 
-void PyInvoker::RunCounterFunc(std::string module, std::string func)
-{
-	PyLock lock;
-	try
-	{
-		boost::python::object pyModule(boost::python::import(module.c_str()));
-		boost::python::object pyResult(pyModule.attr(func.c_str())());
 
-		int result = boost::python::extract<int>(pyResult);
-		std::cout << "Thread = " << std::this_thread::get_id() << "Result = " << result << std::endl;
-	}
-	catch (...)
-	{
-		PyErr_Print();
-		PyErr_Clear();
-	}
-}

@@ -59,45 +59,58 @@ int main()
 		std::cout << "----Python Enviorment Initialized Failed!----" << std::endl;
 		return -1;
 	}
-	/*
-	std::cout << "----Trail----" << std::endl;
-	PyInvoker::Trail();
-	*/
 
-	std::cout << "----ImportModule----" << std::endl;
+
+	//std::cout << "----Trail----" << std::endl;
+	//PyInvoker::Trail();
+
+
 	PyInvoker::ImportModule(GetCurrentDir() + "pyscripts");
 
 
-	//std::cout << "----Call PythonGreet----" << std::endl;
 	//PyInvoker::RunFunc("PythonGreet", "Hello");
 
 
-	//std::cout << "----Call PythonCalc(Add)----" << std::endl;
+
+
 	//std::vector<int> parasInt;
-	//parasInt.push_back(5);
-	//parasInt.push_back(6);
-	//PyInvoker::RunParasFunc("PythonCalc", "Add", parasInt);
+	//parasInt.push_back(3);
+	//parasInt.push_back(4);
+	//std::cout << "Result = " << PyInvoker::RunParasFunc("PythonCalc", "Add", parasInt) << std::endl;
 
-	std::cout << "----Test MultiThread Begin----" << std::endl;
-	std::thread* th[10];
-	for (int i = 0; i < 10; i++)
+	std::vector<int> parasInt;
+	parasInt.push_back(3);
+	parasInt.push_back(4);
+	std::cout << "Result = " << PyInvoker::Add<int>("PythonCalc", "Add", parasInt) << std::endl;
+
+	std::vector<float> parasFloat;
+	parasFloat.push_back(2.7);
+	parasFloat.push_back(3.1);
+	std::cout << "Result = " << PyInvoker::Add<float>("PythonCalc", "Add", parasFloat) << std::endl;
+
+	std::vector<std::string> parasString;
+	parasString.push_back(std::string("Hello "));
+	parasString.push_back(std::string("world!"));
+	std::cout << "Result = " << PyInvoker::Add<std::string>("PythonCalc", "Add", parasString).c_str() << std::endl;
+
+
+	std::vector<CustomType> parasList;
+	CustomType One;
+	One.push_back(std::string("The "));
+	One.push_back(std::string("World "));
+	CustomType Two;
+	Two.push_back(std::string("is "));
+	Two.push_back(std::string("Font!"));
+	parasList.push_back(One);
+	parasList.push_back(Two);
+	CustomType resultList = PyInvoker::Add<CustomType>("PythonCalc", "Add", parasList);
+
+	std::cout << "list after merged:" << std::endl;
+	for (CustomType::iterator iter = resultList.begin(); iter != resultList.end(); ++iter)
 	{
-		th[i] = new std::thread([&]()
-		{
-			RepeatedAdd(i + 10);
-		});
+		std::cout << (*iter).c_str() << std::endl;
 	}
-
-	RepeatedAdd(-1000);
-
-	for (int i = 0; i < 10; i++)
-	{
-		th[i]->join();
-		delete th[i];
-	}
-	std::cout << "----Test MultiThread End----" << std::endl;
 
 	PyInvoker::Finalize();
-
 	return 0;
 }
