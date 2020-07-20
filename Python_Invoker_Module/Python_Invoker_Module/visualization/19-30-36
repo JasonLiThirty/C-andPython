@@ -1,0 +1,48 @@
+// Visual
+digraph Visual {
+	subgraph "Binary Tree" {
+		1 [label=A]
+		2 [label=B]
+		1 -> 2 [arrowType=vee fontsize=10 splines=curved]
+		3 [label=C]
+		2 -> 3 [arrowType=vee fontsize=10 splines=curved]
+		4 [label=D]
+		2 -> 4 [arrowType=vee fontsize=10 splines=curved]
+		5 [label=E]
+		4 -> 5 [arrowType=vee fontsize=10 splines=curved]
+		6 [label=G]
+		5 -> 6 [arrowType=vee fontsize=10 splines=curved]
+		7 [label=H]
+		6 -> 7 [arrowType=vee fontsize=10 splines=curved]
+		8 [label=I]
+		6 -> 8 [arrowType=vee fontsize=10 splines=curved]
+		9 [label=F]
+		4 -> 9 [arrowType=vee fontsize=10 splines=curved]
+		10 [label=J]
+		9 -> 10 [arrowType=vee fontsize=10 splines=curved]
+	}
+	subgraph Arrow {
+		arrow [label=Conversion color=lightgrey fontname=bold fontsize=20 shape=rarrow style=filled width=5]
+	}
+	subgraph Tree {
+		11 [label=A]
+		12 [label=B]
+		11 -> 12 [arrowType=vee fontsize=10 splines=curved]
+		13 [label=C]
+		12 -> 13 [arrowType=vee fontsize=10 splines=curved]
+		14 [label=D]
+		11 -> 14 [arrowType=vee fontsize=10 splines=curved]
+		15 [label=E]
+		14 -> 15 [arrowType=vee fontsize=10 splines=curved]
+		16 [label=G]
+		14 -> 16 [arrowType=vee fontsize=10 splines=curved]
+		17 [label=H]
+		16 -> 17 [arrowType=vee fontsize=10 splines=curved]
+		18 [label=I]
+		14 -> 18 [arrowType=vee fontsize=10 splines=curved]
+		19 [label=F]
+		11 -> 19 [arrowType=vee fontsize=10 splines=curved]
+		20 [label=J]
+		19 -> 20 [arrowType=vee fontsize=10 splines=curved]
+	}
+}

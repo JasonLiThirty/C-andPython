@@ -74,16 +74,18 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\Jason\AppData\Local\Programs\Python\Python36\include;D:\Program Files %28x86%29\Boost\include\boost-1_69;$(IncludePath)</IncludePath>
+    <IncludePath>D:\203 - C++\C++ Sample\C++_Tree;C:\Users\Jason\AppData\Local\Programs\Python\Python36\include;D:\Program Files %28x86%29\Boost\include\boost-1_69;$(IncludePath)</IncludePath>
     <LibraryPath>D:\Program Files %28x86%29\Boost\lib;C:\Users\Jason\AppData\Local\Programs\Python\Python36\libs;$(LibraryPath)</LibraryPath>
+    <OutDir>..\..\C++_Tree</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\Users\Jason\AppData\Local\Programs\Python\Python36\include;D:\Program Files %28x86%29\Boost\include\boost-1_69;$(IncludePath)</IncludePath>
+    <IncludePath>D:\203 - C++\C++ Sample\C++_Tree;C:\Users\Jason\AppData\Local\Programs\Python\Python36\include;D:\Program Files %28x86%29\Boost\include\boost-1_69;$(IncludePath)</IncludePath>
     <LibraryPath>D:\Program Files %28x86%29\Boost\lib;C:\Users\Jason\AppData\Local\Programs\Python\Python36\libs;$(LibraryPath)</LibraryPath>
+    <OutDir>..\..\C++_Tree</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

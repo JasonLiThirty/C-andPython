@@ -1,12 +1,10 @@
-﻿  PyInvoker.cpp
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(368,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
   Python_Invoker_Module.cpp
-Python_Invoker_Module.cpp(87): warning C4305: 'argument': truncation from 'double' to 'float'
-Python_Invoker_Module.cpp(88): warning C4305: 'argument': truncation from 'double' to 'float'
-     Creating library D:\203 - C++\C++ Sample\Python_Invoker_Module\x64\Release\Python_Invoker_Module.lib and object D:\203 - C++\C++ Sample\Python_Invoker_Module\x64\Release\Python_Invoker_Module.exp
+     Creating library ..\..\C++_Tree\Python_Invoker_Module.lib and object ..\..\C++_Tree\Python_Invoker_Module.exp
   Generating code
-  85 of 795 functions (10.7%) were compiled, the rest were copied from previous compilation.
-    52 functions were new in current compilation
-    81 functions had inline decision re-evaluated but remain unchanged
+  40 of 252 functions (15.9%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    30 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-  Python_Invoker_Module.vcxproj -> D:\203 - C++\C++ Sample\Python_Invoker_Module\x64\Release\Python_Invoker_Module.exe
-  Python_Invoker_Module.vcxproj -> D:\203 - C++\C++ Sample\Python_Invoker_Module\x64\Release\Python_Invoker_Module.pdb (Full PDB)
+  Python_Invoker_Module.vcxproj -> D:\203 - C++\C++ Sample\Python_Invoker_Module\Python_Invoker_Module\..\..\C++_Tree\Python_Invoker_Module.exe
+  Python_Invoker_Module.vcxproj -> ..\..\C++_Tree\Python_Invoker_Module.pdb (Full PDB)
